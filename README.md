@@ -5,8 +5,7 @@ Step by step tutorial, How to dockerize a nodejs istance
 <font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop</b></font>$ mkdir DockerizeNodeJS
 <font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop</b></font>$ cd DockerizeNodeJS/
 <font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop/DockerizeNodeJS</b></font>$ sudo npm init
-</pre>
-<pre>name: (DockerizeNodeJS) dockerizenodejs
+name: (DockerizeNodeJS) dockerizenodejs
 version: (1.0.0) 
 description: Step by step tutorial - How to dockerize NodeJS applications
 entry point: (index.js) 
@@ -40,8 +39,9 @@ About to write to /home/chinaski/Desktop/DockerizeNodeJS/package.json:
 </pre>
 <pre><font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop/DockerizeNodeJS</b></font>$ npm install express --save
 </pre>
-<pre>
+
 <b> Package.json </b>
+<pre>
 {
   "name": "dockerizenodejs",
   "version": "1.0.0",
@@ -64,6 +64,7 @@ About to write to /home/chinaski/Desktop/DockerizeNodeJS/package.json:
 </pre>
 <pre><font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop/DockerizeNodeJS</b></font>$ touch index.js
 </pre>
+
 <b> index.js </b>
 <pre>
 var express = require('express')
@@ -92,8 +93,9 @@ COPY . /app
 CMD node index.js
 EXPOSE 8000
 </pre>
-Building image
-<pre><font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop/DockerizeNodeJS</b></font>$ sudo docker build -t dockerizenodejs .</pre>
+
+<b> Building image </b>
+  <pre><font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop/DockerizeNodeJS</b></font>$ sudo docker build -t dockerizenodejs .</pre>
 <b> Push the image to Docker Hub </b>
 <pre><font color="#586E75"><b>chinaski@chinaski-XPS-15-9550</b></font>:<font color="#839496"><b>~/Desktop/DockerizeNodeJS</b></font>$ docker push andreaborio/dockerizenodejs
 The push refers to repository [docker.io/andreaborio/dockerizenodejs]
